@@ -32,7 +32,7 @@ def main
 
   logger = MultiLogger.new(
     Logger.new($stdout),
-    Logger.new("log/#{environment}.txt", 'daily')
+    Logger.new("log/#{environment}-ma-test.txt", 'daily')
   )
   storage = Storage.new
   slack = SlackClient.new(logger)

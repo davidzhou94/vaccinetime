@@ -5,7 +5,7 @@ require 'rest-client'
 require_relative './base_clinic'
 
 module Cvs
-  STATE = 'OH'
+  STATE = 'MA'
   USER_AGENTS = []
   CVS_CITIES = {}
 
