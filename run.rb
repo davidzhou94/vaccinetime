@@ -14,9 +14,9 @@ require_relative 'lib/sites/cvs'
 UPDATE_FREQUENCY = ENV['UPDATE_FREQUENCY'] || 60 # seconds
 
 def all_clinics(storage, logger)
-  Curative.all_clinics(storage, logger) +
-    Color.all_clinics(storage, logger) +
-    MaImmunizations.all_clinics(storage, logger) +
+  # Curative.all_clinics(storage, logger) +
+  #   Color.all_clinics(storage, logger) +
+  #   MaImmunizations.all_clinics(storage, logger) +
     Cvs.state_clinic_representation(storage, logger)
 end
 

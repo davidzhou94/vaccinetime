@@ -5,7 +5,7 @@ require 'rest-client'
 require_relative './base_clinic'
 
 module Cvs
-  STATE = 'MA'
+  STATE = 'OH'
   USER_AGENTS = []
   CVS_CITIES = {}
 
@@ -137,7 +137,7 @@ module Cvs
     end
 
     def tweet_allowed_new_cities
-      new_cities.filter { |new_city| TWEET_ALLOWED_CITIES.include? new_city }
+      new_cities
     end
 
     def has_not_posted_recently?
@@ -145,7 +145,7 @@ module Cvs
     end
 
     def should_tweet?
-      tweet_allowed_new_cities.length > 5 && has_not_posted_recently?
+      tweet_allowed_new_cities.length > 0 && has_not_posted_recently?
     end
   end
 
